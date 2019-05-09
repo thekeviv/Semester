@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Semester;assembly=Semester"
+             x:Class="Semester.Views.HomePage"
+             BackgroundColor="White">
+               
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Semester" HorizontalOptions="CenterAndExpand"  Style="{StaticResource Key=BoldAndItalic}" FontFamily="{StaticResource Key=Bodoni}" FontSize="60" TextColor="Black"/>
+            <Image Source="homepageimage.jpg" Scale="0.6"/>
+            <Button Text="Add a new course" BackgroundColor="#F2F2F2" FontFamily="{StaticResource Key=Bodoni}" FontSize="25" HorizontalOptions="CenterAndExpand" CornerRadius="15" Padding="10, 0, 10, 0" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

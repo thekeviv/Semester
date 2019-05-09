@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semester.Views.AddNewCourse">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Courses" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontFamily="{StaticResource Key=Bodoni}" FontSize="55" TextColor="Black" Margin="15, 10, 0, 0"/>
+            <Label Text="Select your course" FontFamily="{StaticResource Key=Bodoni}" FontSize="25" TextColor="Black" Margin="15, 0, 0, 0"/>
+            <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Black">
+                            <Label Text="{Binding CourseName}"/>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

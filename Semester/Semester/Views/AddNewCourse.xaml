@@ -2,28 +2,151 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Semester.Views.AddNewCourse"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             >
+    
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Label Text="Courses" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontFamily="{StaticResource Key=Bodoni}" FontSize="55" TextColor="Black" Margin="15, 10, 0, 0"/>
-            <Label Text="Select your course" FontFamily="{StaticResource Key=Bodoni}" FontSize="25" TextColor="Black" Margin="15, 0, 0, 0"/>
-            <Frame BorderColor="Black" Margin="50, 0, 50,1300" CornerRadius="40" ScaleY="0.6" HorizontalOptions="CenterAndExpand">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Courses"
+                   Grid.Row="0"
+                   FontFamily="{StaticResource Key=Bodoni}"
+                   HorizontalOptions="Start"
+                   FontSize="60"
+                   TextColor="Black"
+                   Margin="15, 0, 0, 0"
+                   VerticalOptions="StartAndExpand"/>
+            <Label Text="Select your course"
+                   Grid.Row="0"
+                   FontFamily="{StaticResource Key=Bodoni}"
+                   FontSize="25"
+                   TextColor="Black"
+                   Margin="15, 0, 0, 0"
+                   VerticalOptions="EndAndExpand"/>
+            <Frame CornerRadius="50"
+                   HorizontalOptions="StartAndExpand"
+                   BackgroundColor="#F2F2F2"
+                   Grid.Row="1"
+                   Margin="80,0,80,0"
+                   VerticalOptions="CenterAndExpand"
+                   ScaleY="0.8"
+                   >
                 <CollectionView x:Name="courseList"
                                 ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
                                 ItemsSource="{Binding courseNames}"
                                 HorizontalOptions="CenterAndExpand"
-                               
                                 >
-                    
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Orientation="Horizontal" Padding="10,0,10,0" HorizontalOptions="CenterAndExpand">
-                                <Label Text="{Binding}" VerticalOptions="Center" Scale="1.2"/>
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="10,0,10,0"
+                                         HorizontalOptions="CenterAndExpand">
+                                <Label Text="{Binding}"
+                                       VerticalOptions="CenterAndExpand"
+                                       FontFamily="{StaticResource Key=Bodoni}"
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       TextColor="White"
+                                       BackgroundColor="#FF295E"
+                                       Opacity="62"/>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </Frame>
-        </StackLayout>
+            <Frame Grid.Row="2"
+                   Padding="1,1,1,1"
+                   HasShadow="False"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="StartAndExpand"
+                   CornerRadius="25"
+                   Scale="0.85"
+                   BackgroundColor="#F2F2F2" >
+                <Frame Padding="5,5,5,5"
+                       HasShadow="False"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       CornerRadius="25"
+                       BackgroundColor="#F16084" >
+
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="StartAndExpand">
+                        <Button Text="Task"
+                           Margin="10,0,10,0"
+                           BackgroundColor="#F16084"
+                           Opacity="62"
+                           TextColor="White"
+                           FontFamily="{StaticResource Key=Bodoni}"
+                           FontSize="Large"
+                           />
+                        <Button Text="Schedule"
+                           Margin="10,0,10,0"
+                           BackgroundColor="#F16084"
+                           Opacity="62"
+                           TextColor="White"
+                           FontFamily="{StaticResource Key=Bodoni}"
+                           FontSize="Large"
+                           />
+                    </StackLayout>
+                </Frame>
+            </Frame>
+            <Frame Grid.Row="3"
+                   Margin="15,0,15,0"
+                   HasShadow="False"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand"
+                   CornerRadius="25"
+                   ScaleY="1"
+                   BackgroundColor="#F2F2F2" >
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                
+            </Frame>
+            <Frame Grid.Row="5"
+                   HasShadow="False"
+                   HorizontalOptions="Fill" 
+                   VerticalOptions="FillAndExpand"
+                   ScaleY="1"
+                   BackgroundColor="#F2F2F2"
+                   >
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Done"
+                           Margin="65,0,10,0"
+                           BackgroundColor="#F16084"
+                           Opacity="62"
+                           TextColor="White"
+                           FontFamily="{StaticResource Key=Bodoni}"
+                           FontSize="Large"
+                           HorizontalOptions="Start"
+                           Scale="1.5"
+                           CornerRadius="12"
+                           
+                           />
+                    <Button Text="Delete"
+                           Margin="50,0,10,0"
+                           BackgroundColor="#F16084"
+                           Opacity="62"
+                           TextColor="White"
+                           FontFamily="{StaticResource Key=Bodoni}"
+                           FontSize="Large"
+                           Scale="1.5"
+                           CornerRadius="12"
+                           />
+                </StackLayout>
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

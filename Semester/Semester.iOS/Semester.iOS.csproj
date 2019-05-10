@@ -153,4 +153,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\homepageimage.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
 </Project>

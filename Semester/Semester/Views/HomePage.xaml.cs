@@ -17,9 +17,9 @@ namespace Semester.Views
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new AddNewCourse(new ViewModels.CoursesViewModel()));
         }
     }
 }

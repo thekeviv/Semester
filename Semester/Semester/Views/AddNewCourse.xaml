@@ -106,13 +106,22 @@
                    CornerRadius="25"
                    ScaleY="1"
                    BackgroundColor="#F2F2F2" >
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="90*"/>
-                        <ColumnDefinition Width="10*"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
+                <ScrollView>
+                    <CollectionView>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    
+                </ScrollView>
+                
                 
             </Frame>
             <Frame Grid.Row="5"
